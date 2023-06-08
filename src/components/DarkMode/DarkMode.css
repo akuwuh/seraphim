@@ -19,9 +19,9 @@
 .dark {
     cursor: pointer;
     margin: auto;
-    margin-top: 2vw;
+    margin-top: 1vw;
     /*change size of toggle with font-size*/
-    font-size: calc(max(0.11vw, 0.17vh));;
+    font-size: calc(max(0.10vw, 0.15vh));;
     position: relative;
     height: var(--toggleHeight);
     width: var(--toggleWidth);

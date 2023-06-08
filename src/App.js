@@ -24,9 +24,7 @@ function App() {
         <Signature className={"signature"}/>
         <DarkMode/>
         <div className={"site-content"}>
-
         </div>
-
         <Nav tabs={tabs}/>
         <Socials/>
       </div>
