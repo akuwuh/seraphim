@@ -6,6 +6,7 @@ import './fonts/OMORI_GAME.ttf';
 import { useState } from 'react';
 import DarkMode from './components/DarkMode/DarkMode'
 import {ReactComponent as Signature} from "./icons/seraphim sig.svg";
+import Render from './components/Render'
 // main components (unchanged)
 
 
@@ -19,13 +20,25 @@ const tabs = [
 
 // rendering function
 function App() {
+  const [activePage, setPage] = useState(localStorage.getItem('activePage') || 'Home')
+  const handleNav = (page) => {
+      setPage(page)
+      localStorage.setItem('activePage', page);
+  }
+
   return (
       <div className={"container"}>
+        <a href={"#"}
+           onClick={function () {
+            handleNav('Home')
+           }}
+           id={"signature-wrapper"}
+        >
         <Signature className={"signature"}/>
+        </a>
         <DarkMode/>
-        <div className={"site-content"}>
-        </div>
-        <Nav tabs={tabs}/>
+        <Render page={activePage}/>
+        <Nav tabs={tabs} onPageChange={handleNav} currPage={activePage}/>
         <Socials/>
       </div>
   );
