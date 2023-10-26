@@ -1,11 +1,11 @@
 @font-face {
     font-family: "OMORI_GAME2";
-    src: local("OMORI_GAME2");
+    src: local("./fonts/OMORI_GAME2");
 }
 
 @font-face {
     font-family: "OMORI_GAME";
-    src: local("OMORI_GAME");
+    src: local("./fonts/OMORI_GAME2");
 }
 
 :root {
